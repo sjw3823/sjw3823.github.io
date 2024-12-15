@@ -78,13 +78,28 @@
 
         #box_shadow_1
         {
-            width:1px;
-            height:1px;
-            background-color:rgba(0,0,0,0);
-            box-shadow: 0 0 200px 200px #02e33c;
-            float:left;
-            top:10px;
-            right:25%;
+            width: 1px;
+            height: 1px;
+            background-color: rgba(0,0,0,0);
+            box-shadow: 0 0 999px 200px #02e33c;
+            float: left;
+            top: 15%;
+            left: 25%;
+            position: relative;
+            z-index: -1;
+        }
+
+        #box_shadow_2
+        {
+            width: 1px;
+            height: 1px;
+            background-color: rgba(0,0,0,0);
+            box-shadow: 0 0 999px 200px #02E3B3;
+            float: right;
+            bottom: 15%;
+            right: 25%;
+            position: relative;
+            z-index: -1;
         }
 
             
@@ -105,6 +120,7 @@
     </header>
     <main>
         <div id="box_shadow_1"></div>
+        <div id="box_shadow_2"></div>
     </main>
     <footer>
         

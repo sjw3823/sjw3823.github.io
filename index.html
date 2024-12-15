@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main site</title>
     <style>
-        header{
+        header
+        {
             position:relative;
             top:0;
             width:100%;
@@ -19,7 +20,8 @@
             align-items: center;
         }
         
-        body {
+        body
+        {
             margin: 0;
             width:100%;
             height:100%;
@@ -27,14 +29,16 @@
             
         }
 
-       html {
+       html 
+        {
            width:100%;
            height:100%;
            display: flex;    
            align-items: center;
            font-family: "Arial", sans-serif;
        }
-        #main_title{
+        #main_title
+        {
             color:white;
             height:80%;
             font-size:30px;
@@ -43,7 +47,8 @@
             font-weight:bolder;
         }
 
-        #site_map{
+        #site_map
+        {
             color:white;
             height:80%;
             font-size:14px;
@@ -54,16 +59,35 @@
             justify-content: space-around;
             align-items: center;
         }
+
+        .site_map
+        {
+            padding-right:10px;
+        }
+        .site_map_between
+        {
+            background-color:white;
+            width:1px;
+            height:50px;
+            display:flwx;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+            
     </style>
 </head>
 <body>
     <header>
         <div id="main_title">main site</div>
         <div id="site_map">
-            <div site_map_1>1학년</div>
-            <div site_map_2>2학년</div>
-            <div site_map_3>3학년</div>
-            <div site_map_4>4학년</div>
+            <div class="site_map" id="site_map_1">1학년</div>
+            <div class="site_map_between"></div>
+            <div class="site_map" id="site_map_2">2학년</div>
+            <div class="site_map_between"></div>
+            <div class="site_map" id="site_map_3">3학년</div>
+            <div class="site_map_between"></div>
+            <div class="site_map" id="site_map_4">4학년</div>
         </div>
     </header>
     <main>

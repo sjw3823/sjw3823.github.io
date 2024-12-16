@@ -170,4 +170,33 @@
     <footer>
         
     </footer>
+    <script>
+        // script.js
+        document.addEventListener("DOMContentLoaded", () => 
+        {
+            const header = document.getElementById("header");
+            const footer = document.getElementById("footer");
+
+             // 헤더 애니메이션 (페이지 로드 시)
+            setTimeout(() => {
+            header.style.transform = "translateY(0)";}, 100); // 약간의 지연시간 추가
+
+            // 푸터 애니메이션 (스크롤 시)
+            window.addEventListener("scroll", () => 
+            {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+
+                if (scrollPosition >= documentHeight) 
+                {
+                   footer.style.transform = "translateY(0)";
+                } 
+                else 
+                {
+                    footer.style.transform = "translateY(100%)";
+                }
+            });
+        });
+    </script>
 </body>
+</html>

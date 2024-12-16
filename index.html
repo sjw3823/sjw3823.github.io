@@ -179,7 +179,7 @@
 
              // 헤더 애니메이션 (페이지 로드 시)
             setTimeout(() => {
-            header.style.transform = "translateY(0)";}, 100); // 약간의 지연시간 추가
+            header.Style.transform = "translateY(0)";}, 100); // 약간의 지연시간 추가
 
             // 푸터 애니메이션 (스크롤 시)
             window.addEventListener("scroll", () => 
@@ -189,11 +189,11 @@
 
                 if (scrollPosition >= documentHeight) 
                 {
-                   footer.style.transform = "translateY(0)";
+                   footer.Style.transform = "translateY(0)";
                 } 
                 else 
                 {
-                    footer.style.transform = "translateY(100%)";
+                    footer.Style.transform = "translateY(100%)";
                 }
             });
         });

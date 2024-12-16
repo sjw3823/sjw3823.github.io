@@ -174,8 +174,8 @@
         // script.js
         document.addEventListener("DOMContentLoaded", () => 
         {
-            const header = document.getElementById("header");
-            const footer = document.getElementById("footer");
+            const header = document.getElementById(".header");
+            const footer = document.getElementById(".footer");
 
              // 헤더 애니메이션 (페이지 로드 시)
             setTimeout(() => {
@@ -195,6 +195,8 @@
                 {
                     footer.Style.transform = "translateY(100%)";
                 }
+                console.log("Header:", header);
+console.log("Footer:", footer);
             });
         });
     </script>

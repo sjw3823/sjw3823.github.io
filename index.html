@@ -28,10 +28,10 @@
         header
         {
             position:fixed;
-            top:-90px;
+            top:0;
             width:100%;
             height:90px;
-            background-color:rgba(20,20,50,0);
+            background-color:rgba(20,20,50,0.8);
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -126,7 +126,7 @@
             bottom:-170px;
             width:100%;
             height:170px;
-            background-color:rgba(20,20,50,0);
+            background-color:rgba(20,20,50,0.8);
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -181,15 +181,15 @@
                 const documentHeight = document.documentElement.scrollHeight;
 
                 if (scrollPosition === 0) {
-                    header.style.transform = "translateY(90px)";
+                    header.style.transform = "translateY(0)";
                 } else {
                     header.style.transform = "translateY(0)";
                 }
 
                 if (scrollPosition + windowHeight >= documentHeight - 10) {
-                    footer.style.transform = "translateY(-170px)";
-                } else {
                     footer.style.transform = "translateY(0)";
+                } else {
+                    footer.style.transform = "translateY(170px)";
                 }
             });
         });

@@ -27,8 +27,8 @@
         
         header
         {
-            position:relative;
-            top:0;
+            position:fixed;
+            top:-90px;
             width:100%;
             height:90px;
             background-color:rgba(20,20,50,0);
@@ -38,6 +38,7 @@
             align-content: center;
             justify-content: space-between;
             align-items: center;
+            transition: transform 0.3s ease-in-out;
         }
 
         main
@@ -121,8 +122,8 @@
         }
         footer
         {
-            position:relative;
-            bottom:0px;
+            position:fixed;
+            bottom:-170px;
             width:100%;
             height:170px;
             background-color:rgba(20,20,50,0);
@@ -132,6 +133,7 @@
             align-content: center;
             justify-content: space-between;
             align-items: center;
+            transition: transform 0.3s ease-in-out;
         }
 
         #main_2
@@ -142,7 +144,6 @@
             height:600px;
         }
 
-            
     </style>
 </head>
 <body>
@@ -170,38 +171,28 @@
         
     </footer>
     <script>
-        // script.js
-        document.addEventListener("DOMContentLoaded", () => 
-        {
+        document.addEventListener("DOMContentLoaded", () => {
             const header = document.getElementById("header");
             const footer = document.getElementById("footer");
 
-            // 헤더가 존재할 경우에만 실행
-            if (header) {
-                setTimeout(() => {
+            window.addEventListener("scroll", () => {
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+
+                if (scrollPosition === 0) {
+                    header.style.transform = "translateY(90px)";
+                } else {
                     header.style.transform = "translateY(0)";
-                }, 100); // 약간의 지연시간 추가
-            } else {
-                console.error("헤더 요소를 찾을 수 없습니다.");
-            }
+                }
 
-            // 푸터가 존재할 경우에만 실행
-            if (footer) {
-                window.addEventListener("scroll", () => {
-                    const scrollPosition = window.scrollY + window.innerHeight;
-                    const documentHeight = document.documentElement.scrollHeight;
-
-                    if (scrollPosition >= documentHeight) {
-                        footer.style.transform = "translateY(0)";
-                    } else {
-                        footer.style.transform = "translateY(100%)";
-                    }
-                });
-            } else {
-                console.error("푸터 요소를 찾을 수 없습니다.");
-            }
+                if (scrollPosition + windowHeight >= documentHeight) {
+                    footer.style.transform = "translateY(-170px)";
+                } else {
+                    footer.style.transform = "translateY(0)";
+                }
+            });
         });
-
     </script>
 </body>
 </html>

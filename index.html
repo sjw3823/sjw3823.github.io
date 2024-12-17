@@ -31,7 +31,7 @@
             top:0;
             width:100%;
             height:90px;
-            background-color:rgba(20,20,50,0.8);
+            background-color:rgba(20,20,50,0);
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -126,7 +126,7 @@
             bottom:-170px;
             width:100%;
             height:170px;
-            background-color:rgba(20,20,50,0.8);
+            background-color:rgba(20,20,50,0);
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -175,6 +175,8 @@
             const header = document.getElementById("header");
             const footer = document.getElementById("footer");
 
+            header.style.transform = "translateY(0)"; // 첫 페이지 로드 시 헤더가 보이게 설정
+
             window.addEventListener("scroll", () => {
                 const scrollPosition = window.scrollY;
                 const windowHeight = window.innerHeight;
@@ -183,7 +185,7 @@
                 if (scrollPosition === 0) {
                     header.style.transform = "translateY(0)";
                 } else {
-                    header.style.transform = "translateY(0)";
+                    header.style.transform = "translateY(-90px)";
                 }
 
                 if (scrollPosition + windowHeight >= documentHeight - 10) {

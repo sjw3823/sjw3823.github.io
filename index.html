@@ -5,143 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main site</title>
     <style>
-       html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    display: flex;
-    flex-direction: column;
-     background-color: rgb(25,25,70);
-}
-
-main {
-    flex: 1;
-}
-
-footer {
-    height: 170px; /* 푸터 높이 */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-        
-        header
-        {
-            position:fixed;
-            top:0;
-            width:100%;
-            height:90px;
-            background-color:rgba(20,20,50,0.8);
+        body {
             display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-content: center;
+            flex-direction: column;
+            background-color: rgb(25, 25, 70);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 90px;
+            background-color: rgba(20, 20, 50, 0.8);
+            display: flex;
             justify-content: space-between;
             align-items: center;
             transition: transform 0.3s ease-in-out;
         }
 
-      
-
-        #main_1
-        {
-            position:relative;
-            width:100%;
-            height:950px;
-        }
-        
-        #main_title
-        {
-            color:white;
-            height:80%;
-            font-size:30px;
-            display:flex;
-            align-items: center;
-            font-weight:bolder;
-            padding-left:10px;
-            padding-right:10px
+        main {
+            flex: 1;
+            width: 100%;
+            padding-top: 90px; /* Adjusted for fixed header */
         }
 
-        #site_map
-        {
-            color:white;
-            height:80%;
-            font-size:14px;
-            display:flex;
+        footer {
+            height: 170px;
+            width: 100%;
+            background-color: rgba(20, 20, 50, 0.8);
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            flex-direction: row;
-            flex-wrap: nowrap;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #main_1 {
+            width: 100%;
+            height: 950px;
+        }
+
+        #main_title {
+            color: white;
+            font-size: 30px;
+            font-weight: bolder;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #site_map {
+            color: white;
+            font-size: 14px;
+            display: flex;
             justify-content: space-around;
             align-items: center;
         }
 
-        .site_map
-        {
-            padding-right:5px;
-            padding-left:5px;
-        }
-        .site_map_between
-        {
-            background-color:white;
-            width:1px;
-            height:20px;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
+        .site_map {
+            padding: 0 5px;
         }
 
-        #box_shadow_1
-        {
+        .site_map_between {
+            background-color: white;
+            width: 1px;
+            height: 20px;
+        }
+
+        #box_shadow_1, #box_shadow_2 {
+            position: absolute;
             width: 1px;
             height: 1px;
-            background-color: rgba(0,0,0,0);
-            box-shadow: 0 0 999px 200px #02e33c;
-            float: left;
-            top: 15vh;
-            left: 25vw;
-            position: relative;
+            background-color: rgba(0, 0, 0, 0);
             z-index: -1;
         }
 
-        #box_shadow_2
-        {
-            width: 1px;
-            height: 1px;
-            background-color: rgba(0,0,0,0);
+        #box_shadow_1 {
+            box-shadow: 0 0 999px 200px #02e33c;
+            top: 15vh;
+            left: 25vw;
+        }
+
+        #box_shadow_2 {
             box-shadow: 0 0 999px 200px #02e3b3;
             bottom: 10vw;
             right: 50vh;
-            position: absolute;
-            z-index: -1;
-        }
-        footer
-        {
-            position:fixed;
-            bottom:-170px;
-            width:100%;
-            height:170px;
-            background-color:rgba(20,20,50,0.8);
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-content: center;
-            justify-content: space-between;
-            align-items: center;
-            transition: transform 0.3s ease-in-out;
         }
 
-        #main_2
-        {
-            background-color:rgba20,20,50,0.8();
-            position:relative;
-            width:100%;
-            height:600px;
+        #main_2 {
+            background-color: rgba(20, 20, 50, 0.8);
+            width: 100%;
+            height: 600px;
         }
-
     </style>
 </head>
 <body>
@@ -162,12 +121,9 @@ footer {
             <div id="box_shadow_1"></div>
             <div id="box_shadow_2"></div>
         </div>
-        <div id="main_2">
-        </div>
+        <div id="main_2"></div>
     </main>
-    <footer id="footer">
-        
-    </footer>
+    <footer id="footer"></footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const header = document.getElementById("header");

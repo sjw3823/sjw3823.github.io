@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main site</title>
     <style>
-        html 
-        {
-           width:100vw;
-           height:auto;
-           display: flex;    
-           align-items: center;
-           font-family: "Arial", sans-serif;
-       }
+       html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-        body
-        {
-            position: relative;
-            top: 0px;
-            margin: 0;
-            width: 100%;
-            height: auto;
-            background-color: rgb(25,25,70);
-            
-        }
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    height: 170px; /* 푸터 높이 */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
         
         header
         {
@@ -41,12 +43,7 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        main
-        {
-            position:relative;
-            width:100%;
-            height:auto;
-        }
+      
 
         #main_1
         {
